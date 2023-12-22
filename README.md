@@ -1,72 +1,39 @@
-# Welcome to Remix!
+# Trending Movies App - README
 
-- [Remix Docs](https://remix.run/docs)
-- [Netlify Functions Overview](https://docs.netlify.com/functions/overview)
+# Live Demo of [Trending Movies App](https://movie-app-remix.netlify.app/)
 
-## Netlify Setup
+## Overview
 
-1. Install the [Netlify CLI](https://docs.netlify.com/cli/get-started/):
+This application, built using Remix JS, offers a seamless and interactive way to explore trending movies. It fetches data from TheMovieDB API to display a curated list of trending movies. Users can view key details of each movie, and engage through a comment section for individual movie reviews.
 
-```sh
-npm i -g netlify-cli
-```
+## Features
 
-If you have previously installed the Netlify CLI, you should update it to the latest version:
+- **Trending Movies List**: The app showcases a list of trending movies, each displayed in a distinct block.
+- **Movie Details**: Clicking on a movie redirects to a detailed page with extensive information about the selected movie.
+- **Comment Section**: Each movie's detailed page includes a comment section where users can post their reviews and engage in discussions.
+- **Responsive Design**: Tailored for various devices using Tailwind CSS for a clean, modern user interface.
 
-```sh
-npm i -g netlify-cli@latest
-```
+## Technology Stack
 
-2. Sign up and log in to Netlify:
+- **Remix JS**: For the overall app structure and routing.
+- **TheMovieDB API**: To fetch the latest trending movies data.
+- **Prisma IO**: Used for database management to handle user comments.
+- **Tailwind CSS**: For styling and designing the application.
 
-```sh
-netlify login
-```
+## Installation
 
-3. Create a new site:
+1. Clone the repository: `gh repo clone lazirpascual/movies-app-remix`
+2. Install dependencies: `npm install`
+3. Start the application: `npm run dev`
+4. Open `http://localhost:3000` in your browser.
 
-```sh
-netlify init
-```
+## Usage
 
-## Development
+- **Viewing Movies**: Browse through the list of trending movies on the home page.
+- **Movie Details**: Click on any movie block to view more details.
+- **Adding Comments**: On the movie's detail page, scroll to the comment section to read or add reviews.
 
-Ensure all packages are installed by running:
+## API Configuration
 
-```sh
-npm install
-```
-
-Run
-
-```sh
-netlify dev
-```
-
-Open up [http://localhost:3000](http://localhost:3000), and you're ready to go!
-
-### Adding Redirects and Rewrites
-
-To add redirects and rewrites, add them to the `netlify.toml` file. For more information about redirects and rewrites, see the [Netlify docs](https://docs.netlify.com/routing/redirects/).
-
-### Serve your site locally
-
-To serve your site locally in a production-like environment, run
-
-```sh
-npm run start
-```
-
-Your site will be available at [http://localhost:8888](http://localhost:8888). Note that it will not auto-reload when you make changes.
-
-## Deployment
-
-There are two ways to deploy your app to Netlify, you can either link your app to your git repo and have it auto deploy changes to Netlify, or you can deploy your app manually. If you've followed the setup instructions already, all you need to do is run this:
-
-```sh
-# preview deployment
-netlify deploy --build
-
-# production deployment
-netlify deploy --build --prod
-```
+- Obtain an API key from TheMovieDB.org.
+- Add the API key to the `.env` file in the root directory.
